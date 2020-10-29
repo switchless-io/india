@@ -10,6 +10,12 @@ console.log(typeof india.asdfasdf);
 // console.log(india.formatNumber(10000.5,'indian','decimal1'));
 // console.log(india.formatNumber(10500.5,'indian_thousand','decimal3'));
 describe('india.number',function(){
+	describe('basic health check',function(){
+		it("when number is undefined, return ''",function(){
+			var a={}
+			expect(india.number.toString(a.b,"long")).to.be('');
+		});
+	})
 	describe('.toString(number,"paisa")',function(){
 		describe('handling decimals',function(){
 			it('rouding up -  10000.436 -> 10,000.44',function(){

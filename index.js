@@ -1,11 +1,11 @@
 module.exports={
 	number:{
 		toString:function(number,format){
+			if(!number)
+				return '';
 			if(!format)
 				format = 'paisa';
-			locale = 'en-IN';
 			var p =0;
-			var format_symbol='';
 			switch(format){
 				case 'rupee':
 					p=0;
